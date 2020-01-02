@@ -1,4 +1,4 @@
-package com.hexaware.MLPXX.model;
+package com.hexaware.MLP195.model;
 import java.util.Objects;
 
 /**
