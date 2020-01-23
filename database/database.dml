@@ -13,3 +13,49 @@ insert into MENU values(104);
 
 insert into MENU values(105);
 
+-- inserting values into customer details
+insert into CUSTOMER (CUS_NAME,CUS_ADDRESS,CUS_PHNO,CUS_EMAIL,CUS_DOB)
+VALUES 
+('Ganesh','97/3,chennai-19',8056179,'ganeshv2@hexaware.com','1999-01-19'),
+('nandhini','north park street, chennai-62',9003099,'nandhini@hexaware.com','1998-12-17'),
+('uthraa','kelambakkam,chennai 103',995238,'uthraa@hexaware.com','1998-09-13'),
+('akash','hyderabad',987654,'akash@hexaware.com','1999-04-26'),
+('aparna','madhuravoyil',944449,'aparna@hexaware.com','1999-04-15');
+
+
+-- inserting values into wallet
+insert into wallet (user_id,Payment_mode)
+values
+('10001','google pay'),
+('10002','debit card'),
+('10003','credit card'),
+('10004','cash on delivery'),
+('10005','paytm');
+
+-- inserting values into menu_items 
+insert  into MENU_ITEMS VALUES 
+(71,'Samosa','Veg',10),
+(01,'Idly','Veg',6),
+(25,'Chicken Briyani','Non Veg',90),
+(55,'Chilli Porota','Veg',90),
+(68,'Plain Naan','Veg',40);
+
+-- inserting values into vendor
+insert into VENDOR (VEN_ID,VEN_NAME,VEN_ADDRESS ,VEN_PHNO ,VEN_EMAIL) values
+(1, 'THALLAPAKATI BRIYANI','123,ARCOT ROAD,CHENNAI',987654328,'thalapakati.b@gmail.com'),
+( 2,'SS BRIYANI','123,ABC ROAD,CHENNAI-97',987654328,'ssbriyani@gmail.com'),
+( 3,'SAI BHAVAN','123,HIGH ROAD,CHENNAI-96',987654328,'saibhavan.8@gmail.com'),
+( 4,'SIT AND EAT','123,SSS ROAD,CHENNAI-58',987654284,'sitandeat@gmail.com'),
+(5,'SPRINGS ','123,CDE ROAD,CHENNAI-45',98765483,'springs@gmail.com');
+
+-- inserting values into ORDER_HISTORY
+insert into ORDER_HISTORY (ORD_CUS_ID,ORD_ORD_ID,ORD_DETAILS,ORD_PAYMENT) 
+values 
+(1,1,'idli','gpay'),
+(2,2,'sambar-idli','upi'),
+(3,3,'dosa','paytm'),
+(4,4,'pongal','phonepay'),
+(5,5,'upma','gpay');
+
+
+
