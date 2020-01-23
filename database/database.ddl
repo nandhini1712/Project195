@@ -4,7 +4,41 @@ create database MLP195;
 -- using the Database
 use MLP195;
 
--- Creating Menu table 
-CREATE TABLE MENU(FOOD_ID INT PRIMARY KEY)
+-- Creating CUSTOMER table 
+
+create table CUSTOMER(CUS_ID int auto_increment,
+CUS_NAME varchar(25),CUS_ADDRESS varchar(30),
+CUS_PHNO int(20),CUS_EMAIL varchar(30),
+CUS_DOB date,constraint cus_id_pk primary key(CUS_ID));
+
+-- Creating VENDOR table 
+
+create table VENDOR(VEN_ID INT auto_increment,
+VEN_NAME VARCHAR(25),VEN_ADDRESS VARCHAR(30),
+VEN_PHNO INT(20),VEN_EMAIL VARCHAR(30),
+CONSTRAINT VEN_ID_PK PRIMARY KEY(VEN_ID));
+
+-- Creating MENU table 
+
+create table MENU(MENU_ID INT,
+MENU_NAME VARCHAR(30),
+MENU_TYPE VARCHAR(10),
+MENU_PRICE INT);
+
+-- Creating ORDER_HISTORY table 
+
+create table ORDER_HISTORY( ORD_CUS_ID INT ,
+ORD_ORD_ID INT,
+ORD_DETAILS VARCHAR(20),
+ORD_PAYMENT VARCHAR(20), 
+CONSTRAINT ORD_CUS_ID_FK FOREIGN KEY(ORD_CUS_ID)  
+REFERENCES CUSTOMER(CUS_ID));
+
+
+--Creating WALLET table
+
+CREATE TABLE WALLET(WAL_CUS_ID INT, 
+WAL_PAYMENT_MODE varchar(20),
+constraint WAL_CUS_ID_FK FOREIGN KEY(WAL_CUS_ID) REFERENCES CUSTOMER(CUS_ID));
 
 
