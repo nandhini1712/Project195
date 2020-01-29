@@ -1,8 +1,5 @@
 -- change the database to your team id
 use MLP195;
-
-
-
 insert into MENU values(101);
 
 insert into MENU values(102);
@@ -13,6 +10,9 @@ insert into MENU values(104);
 
 insert into MENU values(105);
 
+
+
+
 -- inserting values into customer details
 insert into CUSTOMER (CUS_NAME,CUS_ADDRESS,CUS_PHNO,CUS_EMAIL,CUS_DOB)
 VALUES 
@@ -21,6 +21,7 @@ VALUES
 ('uthraa','kelambakkam,chennai 103',995238,'uthraa@hexaware.com','1998-09-13'),
 ('akash','hyderabad',987654,'akash@hexaware.com','1999-04-26'),
 ('aparna','madhuravoyil',944449,'aparna@hexaware.com','1999-04-15');
+
 
 
 -- inserting values into wallet
