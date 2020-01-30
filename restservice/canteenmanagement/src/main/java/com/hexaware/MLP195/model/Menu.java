@@ -19,9 +19,10 @@ public class Menu {
   }
 /**
  * @param argFoodId to initialize food id.
+ * @param argFoodName to initialize food Name.
  * used to get details through constructor.
  */
-  public Menu(final int argFoodId,final String argFoodName) {
+  public Menu(final int argFoodId, final String argFoodName) {
     this.foodId = argFoodId;
     this.foodName = argFoodName;
   }
@@ -34,14 +35,14 @@ public class Menu {
       return false;
     }
     Menu menu = (Menu) obj;
-    if (Objects.equals(foodId, menu.foodId)||Objects.equals(foodName, menu.foodName)) {
+    if (Objects.equals(foodId, menu.foodId) || Objects.equals(foodName, menu.foodName)) {
       return true;
     }
     return false;
   }
   @Override
     public final int hashCode() {
-    return Objects.hash(foodId,foodName);
+    return Objects.hash(foodId, foodName);
   }
     /**
      * @return this food ID.
@@ -49,13 +50,17 @@ public class Menu {
   public final int getFoodId() {
     return foodId;
   }
+    /**
+     * @return this food Name.
+     */
   public final String getFoodName() {
     return foodName;
   }
     /**
      * @param argFoodId gets the food id.
+     * @param argFoodName gets the food Name.
      */
-  public final void setFoodId(final int argFoodId,final String argFoodName) {
+  public final void setFoodId(final int argFoodId, final String argFoodName) {
     this.foodId = argFoodId;
     this.foodName = argFoodName;
   }
