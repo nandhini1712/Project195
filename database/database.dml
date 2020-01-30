@@ -41,13 +41,12 @@ insert into VENDOR (VEN_ID,VEN_NAME,VEN_ADDRESS ,VEN_PHNO ,VEN_EMAIL,ORD_STATUS,
 (5,'SPRINGS ','123,CDE ROAD,CHENNAI-45',98765483,'springs@gmail.com','ACCEPTED','DELIVERED',200,5);
 
 -- inserting values into ORDER_HISTORY
-insert into ORDER_HISTORY (ORD_CUS_ID,ORD_ORD_ID,ORD_DETAILS,ORD_PAYMENT) 
+insert into ORDER_HISTORY (ORD_CUS_ID,ORD_ORD_ID,ORD_DETAILS,ORD_PAYMENT,ORDER_STATUS,TOTAL_COST) 
 values 
-(1,1,'idli','gpay'),
-(2,2,'sambar-idli','upi'),
-(3,3,'dosa','paytm'),
-(4,4,'pongal','phonepay'),
-(5,5,'upma','gpay');
-
+(1,1,'idli','gpay','DELIVERED',20.00),
+(2,2,'sambar-idli','upi','PREPARING',30.00),
+(3,3,'dosa','paytm','DELIVERING',25.00),
+(4,4,'pongal','phonepay','DELIVERED',25.00),
+(5,5,'upma','gpay','PREPARING',20.00);
 
 
