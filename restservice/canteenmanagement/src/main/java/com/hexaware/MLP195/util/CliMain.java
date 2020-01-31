@@ -47,8 +47,10 @@ class CliMain {
   private void showFullMenu() {
     Menu[] menu = MenuFactory.showMenu();
     System.out.println("Menu_Id");
+    System.out.println("Menu_Name");
     for (Menu m : menu) {
       System.out.println(m.getFoodId());
+      System.out.println(m.getFoodName());
     }
   }
 /**
