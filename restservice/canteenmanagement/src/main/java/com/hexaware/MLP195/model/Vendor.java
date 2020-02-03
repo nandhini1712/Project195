@@ -9,8 +9,8 @@ public class Vendor {
 /**
  * venId to store venId.
  */
-  private int venId ;
-  private String venName ;
+  private int venId;
+  private String venName;
   private String venAddress;
   private double venPhno;
   private String venEmail;
@@ -18,7 +18,6 @@ public class Vendor {
   private String delStatus;
   private float ordCost;
   private int ordTokenNumber;
-  
   /**
    * default constructor.
    */
@@ -26,15 +25,15 @@ public class Vendor {
   }
 
   /**
-   * @param argVenId to initalize venId. 
-   * argVenName to initalize venName.
-   * argVenAddress to initalize venAddress. 
-   * argVenPhno to initalize venPhno                
-   *  argVenEmail to initalize venEmail.
-   *  argOrdStatus to initalize ordStatus.
-   *  argDelStatus toinitalize delStatus. 
-   * argOrdCost to initalize ordCost.
-   *  argOrdTokenNumber to initalize ordTokenNumber. 
+   * @param argVenId to initalize venId.
+   * @param argVenName to initalize venName.
+   * @param argVenAddress to initalize venAddress.
+   * @param argVenPhno to initalize venPhno 
+   * @param argVenEmail to initalize venEmail.
+   * @param argOrdStatus to initalize ordStatus.
+   * @param argDelStatus toinitalize delStatus.
+   * @param argOrdCost to initalize ordCost.
+   * @param argOrdTokenNumber to initalize ordTokenNumber.
    * used to get
    *                 details through constructor.
    */
@@ -56,46 +55,46 @@ public class Vendor {
   @Override
   public final boolean equals(final Object obj) {
     if (this == obj)
-      return true;
+    return true;
     if (obj == null)
-      return false;
+    return false;
     if (getClass() != obj.getClass())
-      return false;
+    return false;
     final Vendor other = (Vendor) obj;
     if (delStatus == null) {
       if (other.delStatus != null)
-        return false;
+    return false;
     } else if (!delStatus.equals(other.delStatus))
       return false;
     if (Float.floatToIntBits(ordCost) != Float.floatToIntBits(other.ordCost))
-      return false;
+    return false;
     if (ordStatus == null) {
       if (other.ordStatus != null)
-        return false;
+    return false;
     } else if (!ordStatus.equals(other.ordStatus))
-      return false;
+    return false;
     if (ordTokenNumber == 0) {
       if (other.ordTokenNumber != 0)
-        return false;
+    return false;
     } else if (ordTokenNumber==(other.ordTokenNumber))
-      return false;
+    return false;
     if (venAddress == null) {
       if (other.venAddress != null)
-        return false;
+    return false;
     } else if (!venAddress.equals(other.venAddress))
-      return false;
+    return false;
     if (venEmail == null) {
       if (other.venEmail != null)
-        return false;
+    return false;
     } else if (!venEmail.equals(other.venEmail))
-      return false;
+    return false;
     if (venId != other.venId)
-      return false;
+    return false;
     if (venName == null) {
       if (other.venName != null)
-        return false;
+    return false;
     } else if (!venName.equals(other.venName))
-      return false;
+    return false;
     if (Double.doubleToLongBits(venPhno) != Double.doubleToLongBits(other.venPhno))
       return false;
     return true;

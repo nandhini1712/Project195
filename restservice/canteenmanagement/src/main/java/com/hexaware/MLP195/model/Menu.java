@@ -65,9 +65,9 @@ public class Menu {
     /**
      * @return this food Type.
      */
-    public final String getFoodType() {
+  public final String getFoodType() {
     return foodType;
-    }
+  }
       /**
      * @return this food Price.
      */
