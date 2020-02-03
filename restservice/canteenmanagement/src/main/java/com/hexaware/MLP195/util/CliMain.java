@@ -20,7 +20,7 @@ class CliMain {
   }
 /**
  * mainMenuDetails method  process the option selected from main menu.
- */
+  */
   private void mainMenuDetails() {
     try {
       System.out.println("Enter your choice:");
