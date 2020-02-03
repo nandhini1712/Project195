@@ -11,22 +11,22 @@ public class Wallet {
  * WalwaymentMode to store payment methods.
  * wAL_BALANCE to store customer balance.
  */
-  private int walCusId ;
-  private String walPaymentMode ;
-  private int walBalance ;
+  private int walCusId;
+  private String walPaymentMode;
+  private int walBalance;
   /**
    * Default Constructor.
    */
   public Wallet() {
 
   }
-/** 
+  /**
  * @param argWalCusId to initialize CUSTOMER ID.
  * @param argWalPaymentMode to initialize PAYMENT METHODS.
  * @param argWalBalance to initialize CUSTOMER'S BALANCE.
  * used to get details through constructor.
  */
-  public Wallet(final int argWalCusId, final String argWalPaymentMode,final int argWalBalance) {
+  public Wallet(final int argWalCusId, final String argWalPaymentMode, final int argWalBalance) {
     this.walCusId = argWalCusId;
     this.walPaymentMode = argWalPaymentMode;
     this.walBalance = argWalBalance;
@@ -40,22 +40,22 @@ public class Wallet {
       return false;
     }
     Wallet menu = (Wallet) obj;
-    if (Objects.equals(walCusId, menu.walCusId) || Objects.equals(walPaymentMode, menu.walPaymentMode) || Objects.equals(walBalance, menu.walBalance) ) {
+    if (Objects.equals(walCusId, menu.walCusId) || Objects.equals(walPaymentMode, menu.walPaymentMode) || Objects.equals(walBalance, menu.walBalance)){
       return true;
     }
     return false;
   }
   @Override
     public final int hashCode() {
-    return Objects.hash(walCusId, walPaymentMode,walBalance);
+    return Objects.hash(walCusId, walPaymentMode, walBalance);
   }
-    /** 
+    /**
      * @return this customer ID.
      */
   public int getwalCusId() {
     return walCusId;
   }
-    /** 
+    /**
      * @return this food Name.
      */
 
@@ -77,4 +77,4 @@ public class Wallet {
     this.walBalance = argWalBalance;
   }
 }
-    
+

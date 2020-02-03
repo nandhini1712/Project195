@@ -41,7 +41,7 @@ public class Menu {
       return false;
     }
     Menu menu = (Menu) obj;
-    if (Objects.equals(foodId, menu.foodId) || Objects.equals(foodName, menu.foodName) || Objects.equals(foodType,menu.foodName) || (Objects.equals(foodPrice,menu.foodPrice))) {
+    if (Objects.equals(foodId, menu.foodId) || Objects.equals(foodName, menu.foodName) || Objects.equals(foodType, menu.foodName) || (Objects.equals(foodPrice, menu.foodPrice))) {
       return true;
     }
     return false;
@@ -66,7 +66,7 @@ public class Menu {
      * @return this food Type.
      */
     public final String getFoodType() {
-      return foodType;
+    return foodType;
     }
       /**
      * @return this food Price.
@@ -83,10 +83,10 @@ public class Menu {
     /**
      * @param argFoodId gets the food id.
      * @param argFoodName gets the food Name.
-     * @param argFoodType gets the food Type 
-     * @param argFoodPrice gets the food Price 
+     * @param argFoodType gets the food Type.
+     * @param argFoodPrice gets the food Price.
      */
-  public final void setFoodId(final int argFoodId, final String argFoodName,final String argFoodType,final float argFoodPrice) {
+  public final void setFoodId(final int argFoodId, final String argFoodName, final String argFoodType, final float argFoodPrice) {
     this.foodId = argFoodId;
     this.foodName = argFoodName;
     this.foodType = argFoodType;
