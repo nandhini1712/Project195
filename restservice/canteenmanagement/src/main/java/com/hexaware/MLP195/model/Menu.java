@@ -43,7 +43,8 @@ public class Menu {
       return false;
     }
     Menu menu = (Menu) obj;
-    if (Objects.equals(foodId, menu.foodId) || Objects.equals(foodName, menu.foodName) || Objects.equals(foodType, menu.foodName) || (Objects.equals(foodPrice, menu.foodPrice))) {
+    if (Objects.equals(foodId, menu.foodId) || Objects.equals(foodName, menu.foodName)
+        || Objects.equals(foodType, menu.foodName) || (Objects.equals(foodPrice, menu.foodPrice))) {
       return true;
     }
     return false;
@@ -69,21 +70,15 @@ public class Menu {
     /**
      * @return this food Type.
      */
-    public final String getFoodType() {
+  public final String getFoodType() {
     return foodType;
-    }
+  }
       /**
      * @return this food Price.
      */
   public final float getFoodPrice() {
     return foodPrice;
   }
-  /**
-     * @param argFoodId
-     * @param argFoodName
-     * @param argFoodType
-     * @param argFoodPrice
-     */
     /**
      * @param argFoodId gets the food id.
      * @param argFoodName gets the food Name.
@@ -96,4 +91,4 @@ public class Menu {
     this.foodType = argFoodType;
     this.foodPrice = argFoodPrice;
   }
- }
+}

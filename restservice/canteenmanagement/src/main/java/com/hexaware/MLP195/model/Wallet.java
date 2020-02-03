@@ -40,7 +40,9 @@ public class Wallet {
       return false;
     }
     Wallet wallet = (Wallet) obj;
-    if (Objects.equals(walCusId, wallet.walCusId) || Objects.equals(walPaymentMode, wallet.walPaymentMode) || Objects.equals(walBalance, wallet.walBalance)){
+    if (Objects.equals(walCusId, wallet.walCusId)
+        || Objects.equals(walPaymentMode, wallet.walPaymentMode)
+        || Objects.equals(walBalance, wallet.walBalance)) {
       return true;
     }
     return false;
@@ -62,16 +64,18 @@ public class Wallet {
   public final String getwalPaymentMode() {
     return walPaymentMode;
   }
-
+/**
+     * @return this WalPaymentMode.
+     */
   public int getwalBalance() {
     return walBalance;
   }
     /**
-     * @param argWALCUSID gets the customer id.
-     * @param argWALPAYMENTMODE gets the PAYMENT METHODS.
-     * @param argWALBALANCE gets the customer BALANCE.
+     * @param argWalCusId gets the customer id.
+     * @param argWalPaymentMode gets the PAYMENT METHODS.
+     * @param argWalBalance gets the customer BALANCE.
      */
-    public final void setwalCusId(final int argWalCusId, final String argWalPaymentMode, final int argWalBalance) {
+  public final void setwalCusId(final int argWalCusId, final String argWalPaymentMode, final int argWalBalance) {
     this.walCusId = argWalCusId;
     this.walPaymentMode = argWalPaymentMode;
     this.walBalance = argWalBalance;

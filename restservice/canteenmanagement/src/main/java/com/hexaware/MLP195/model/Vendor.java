@@ -20,20 +20,23 @@ public class Vendor {
    * default constructor.
    */
   public Vendor() {
-
   }
-/**
- * @param argVenId to initalize venId.
- * @param argVenName to initalize venName.
- * @param argVenPhno to initalize venPhno.
- * @param argOrdStatus to initalize ordStatus.
- * @param argDelStatus to initalize delStatus.
- * @param argOrdCost to initalize ordCost.
- * @param argOrdTokenNumber to initalize ordTokenNumber.
- * used to get details through constructor.
- */
-  public Vendor(final int argVenId, final String argVenName, final double argVenPhno, final String argOrdStatus, final String argDelStatus,
-       final float argOrdCost, final int argOrdTokenNumber) {
+
+  /**
+   * @param argVenId to initalize venId.
+   * @param argVenName to initalize venName.
+   * @param argVenPhno to initalize venPhno.
+   * @param argOrdStatus to initalize ordStatus.
+   * @param argDelStatus toinitalize delStatus.
+   * @param argOrdCost to initalize ordCost.
+   * @param argOrdTokenNumber to initalize ordTokenNumber.
+   * used to get
+   *                 details through constructor.
+   */
+
+  public Vendor(final int argVenId, final String argVenName, final double argVenPhno,
+       final String argOrdStatus, final String argDelStatus, final float argOrdCost,
+      final int argOrdTokenNumber) {
     this.venId = argVenId;
     this.venName = argVenName;
     this.venPhno = argVenPhno;
@@ -42,6 +45,7 @@ public class Vendor {
     this.ordCost = argOrdCost;
     this.ordTokenNumber = argOrdTokenNumber;
   }
+
   @Override
   public final boolean equals(final Object obj) {
     if (this == obj) {
@@ -102,106 +106,122 @@ public class Vendor {
   /**
    * @return this vendor Id.
    */
-  public int getVenId() {
+  public final int getVenId() {
     return venId;
   }
-
-  public void setVenId(final int venId) {
-    this.venId = venId;
+/**
+ * @param argvenId set venid
+ */
+  public void setVenId(final int argvenId) {
+    this.venId = argvenId;
   }
 
   /**
    * @return this vendor Name.
    */
-  public String getVenName() {
+  public final String getVenName() {
     return venName;
   }
+  /**
+   * @param argvenName set venname
+   * @param venName
+   */
 
-  public void setVenName(final String venName) {
-    this.venName = venName;
+
+
+  public void setVenName(final String argvenName) {
+    this.venName = argvenName;
   }
 
   /**
    * @return this vendor Phno .
    */
-  public double getVenPhno() {
+  public final double getVenPhno() {
     return venPhno;
   }
+  /**
+   * @param argvenPhno set venphno
+   */
 
-  public void setVenPhno(final double venPhno) {
-    this.venPhno = venPhno;
+  public void setVenPhno(final double argvenPhno) {
+    this.venPhno = argvenPhno;
   }
+
+
   /**
    * @return this ordStatus .
    */
-  public String getOrdStatus() {
+  public final String getOrdStatus() {
     return ordStatus;
   }
+  /**
+   * @param argordStatus set orderstatus
+   */
 
-  public void setOrdStatus(final String ordStatus) {
-    this.ordStatus = ordStatus;
+  public void setOrdStatus(final String argordStatus) {
+    this.ordStatus = argordStatus;
   }
 
   /**
    * @return this delStatus .
    */
-  public String getDelStatus() {
+  public final String getDelStatus() {
     return delStatus;
   }
+  /**
+   * @param argdelStatus set delivery status
+   */
 
-  public void setDelStatus(final String delStatus) {
-    this.delStatus = delStatus;
+  public void setDelStatus(final String argdelStatus) {
+    this.delStatus = argdelStatus;
   }
 
   /**
    * @return this ordCost .
    */
-  public float getOrdCost() {
+  public final float getOrdCost() {
     return ordCost;
   }
+  /**
+   * @param argordCost set order cost
+   */
 
-  public void setOrdCost(final float ordCost) {
-    this.ordCost = ordCost;
+  public void setOrdCost(final float argordCost) {
+    this.ordCost = argordCost;
   }
 
   /**
    * @return this ordTokenNumber.
    */
-  public int getOrdTokenNumber() {
+  public final int getOrdTokenNumber() {
     return ordTokenNumber;
   }
-
-  public void setOrdTokenNumber(final int ordTokenNumber) {
-    this.ordTokenNumber = ordTokenNumber;
-  }
-
   /**
-   * @param argVenId
-   * @param argVenName
-   * @param argvenPhno
-   * @param argordStatus
-   * @param argdelStatus
-   * @param argordCost
-   * @param argordTokenNumber
+   * @param argordTokenNumber set order token number
    */
+
+  public void setOrdTokenNumber(final int argordTokenNumber) {
+    this.ordTokenNumber = argordTokenNumber;
+  }
   /**
-   * @param argVenId gets the venId .
-   * @param argVenName        gets the venName.
-   * @param argVenPhno        gets the vendor phone.
-   * @param argOrdStatus      gets the order status.
-   * @param argDelStatus      gets the delivery status.
-   * @param argOrdCost        gets the order cost.
-   * @param argOrdTokenNumber gets the token number.
+   * @param argVenId gets the vendor ID
+   * @param argVenName gets the vendor Name
+   * @param argVenPhno gets the vendor phone Number
+   * @param argOrdStatus gets the order of the status
+   * @param argDelStatus gets the delivery status
+   * @param argOrdCost gets the order cost
+   * @param argOrdTokenNumber gets the token number
    */
   public final void setVendorId(final int argVenId, final String argVenName,
-      final double argVenPhno, final String argVenStatus, final String argOrdStatus,
-      final String argDelStatus, final float argOrdCost, final int argOrdTokenNumber) {
+      final double argVenPhno, final String argOrdStatus,
+      final String argDelStatus, final float argOrdCost,
+      final int argOrdTokenNumber) {
     this.venId = argVenId;
     this.venName = argVenName;
+    this.venPhno = argVenPhno;
     this.ordStatus = argOrdStatus;
-    this.delStatus= argDelStatus;
-    this.ordCost= argOrdCost;   
-    this.ordTokenNumber= argOrdTokenNumber;
-  
-}
+    this.delStatus = argDelStatus;
+    this.ordCost = argOrdCost;
+    this.ordTokenNumber = argOrdTokenNumber;
+  }
 }
