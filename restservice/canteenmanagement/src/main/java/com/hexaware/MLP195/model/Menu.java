@@ -56,10 +56,12 @@ public class Menu {
   public final int getFoodId() {
     return foodId;
   }
-    /**
-     * @return this food Name.
-     */
-  public final String getFoodName() {
+
+  public void setFoodId(int foodId) {
+    this.foodId = foodId;
+  }
+
+  public String getFoodName() {
     return foodName;
   }
     /**
@@ -92,4 +94,4 @@ public class Menu {
     this.foodType = argFoodType;
     this.foodPrice = argFoodPrice;
   }
-}
+ }
