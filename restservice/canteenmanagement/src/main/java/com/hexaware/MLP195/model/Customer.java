@@ -148,4 +148,7 @@ public class Customer {
     this.cusEmail = argCusEmail;
     this.cusDob = argCusDob;
   }
+	public static Customer[] showCustomer() {
+		return null;
+	}
 }
