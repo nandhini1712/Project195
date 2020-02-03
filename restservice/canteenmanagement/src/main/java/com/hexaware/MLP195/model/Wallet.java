@@ -3,7 +3,7 @@ import java.util.Objects;
 
 /**
  * WALLET class used to display WALLET information.
- * @author UthraaR-hexware
+ * @author Uthraa-hexware
  */
 public class Wallet {
 /**
@@ -39,8 +39,10 @@ public class Wallet {
     if (getClass() != obj.getClass()) {
       return false;
     }
-    Wallet menu = (Wallet) obj;
-    if (Objects.equals(walCusId, menu.walCusId) || Objects.equals(walPaymentMode, menu.walPaymentMode) || Objects.equals(walBalance, menu.walBalance)) {
+    Wallet wallet = (Wallet) obj;
+    if (Objects.equals(walCusId, wallet.walCusId)
+        || Objects.equals(walPaymentMode, wallet.walPaymentMode)
+        || Objects.equals(walBalance, wallet.walBalance)) {
       return true;
     }
     return false;
@@ -62,7 +64,9 @@ public class Wallet {
   public final String getwalPaymentMode() {
     return walPaymentMode;
   }
-
+/**
+     * @return this WalPaymentMode.
+     */
   public int getwalBalance() {
     return walBalance;
   }

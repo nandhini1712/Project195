@@ -28,7 +28,9 @@ public class Customer {
  * @param argCusDob to initialize.customer.dateofbirth.
  * used to get details through constructor.
  */
-  public Customer(final int argCusId, final String argCusName, final String argCusAddress, final int argCusPhno, final String argCusmail, final int argCusDob) {
+  public Customer(final int argCusId, final String argCusName,
+      final String argCusAddress, final int argCusPhno,
+      final String argCusmail, final int argCusDob) {
     this.cusId = argCusId;
     this.cusName = argCusName;
     this.cusAddress = argCusAddress;
@@ -45,7 +47,9 @@ public class Customer {
       return false;
     }
     Customer cust = (Customer) obj;
-    if (Objects.equals(cusId, cust.cusId) || Objects.equals(cusName, cust.cusName) || Objects.equals(cusAddress, cust.cusAddress) || Objects.equals(cusPhno, cust.cusPhno) || Objects.equals(cusEmail, cust.cusEmail) || Objects.equals(cusDob, cust.cusDob)) {
+    if (Objects.equals(cusId, cust.cusId) || Objects.equals(cusName, cust.cusName)
+        || Objects.equals(cusAddress, cust.cusAddress) || Objects.equals(cusPhno, cust.cusPhno)
+        || Objects.equals(cusEmail, cust.cusEmail) || Objects.equals(cusDob, cust.cusDob)) {
       return true;
     }
     return false;
@@ -134,7 +138,9 @@ public class Customer {
      * @param argCusEmail gets the customer Email
      * @param argCusDob gets the customer Date of birth
      */
-  public final void setCustId(final int argCusId, final String argCusName, final String argCusAddress, final int argCusPhno, final String argCusEmail, final int argCusDob) {
+  public final void setCustId(final int argCusId, final String argCusName,
+      final String argCusAddress, final int argCusPhno,
+      final String argCusEmail, final int argCusDob) {
     this.cusId = argCusId;
     this.cusName = argCusName;
     this.cusAddress = argCusAddress;
