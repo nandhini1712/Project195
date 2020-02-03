@@ -30,6 +30,6 @@ public class OrderHistoryFactory {
    */
   public static OrderHistory[] showOrderHistory() {
     List<OrderHistory> orderhistory = dao().show();
-    return orderhistory.toArray(new OrderHistory[orderhistory.size()]);
+    return orderhistory .toArray(new OrderHistory[orderhistory.size()]);
   }
 }

@@ -32,7 +32,9 @@ public class Menu {
     this.foodType = argFoodType;
     this.foodPrice = argFoodPrice;
   }
-  @Override
+  public Menu(int i) {
+}
+@Override
     public final boolean equals(final Object obj) {
     if (obj == null) {
       return false;
