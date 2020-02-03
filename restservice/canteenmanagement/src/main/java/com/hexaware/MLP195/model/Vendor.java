@@ -23,13 +23,13 @@ public class Vendor {
 
   }
 /**
- * @param argVenId to initalize venId. 
+ * @param argVenId to initalize venId.
  * @param argVenName to initalize venName.
- * @param argVenPhno to initalize venPhno.                
+ * @param argVenPhno to initalize venPhno.
  * @param argOrdStatus to initalize ordStatus.
- * @param argDelStatus to initalize delStatus. 
+ * @param argDelStatus to initalize delStatus.
  * @param argOrdCost to initalize ordCost.
- * @param argOrdTokenNumber to initalize ordTokenNumber. 
+ * @param argOrdTokenNumber to initalize ordTokenNumber.
  * used to get details through constructor.
  */
   public Vendor(final int argVenId, final String argVenName, final double argVenPhno, final String argOrdStatus, final String argDelStatus,
@@ -185,8 +185,8 @@ public class Vendor {
    * @param argordTokenNumber
    */
   /**
-   * @param argVenId          gets the food id.
-   * @param argVenName        gets the food Name.
+   * @param argVenId gets the venId .
+   * @param argVenName        gets the venName.
    * @param argVenPhno        gets the vendor phone.
    * @param argOrdStatus      gets the order status.
    * @param argDelStatus      gets the delivery status.
