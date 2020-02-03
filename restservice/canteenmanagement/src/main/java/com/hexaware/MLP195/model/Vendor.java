@@ -11,9 +11,7 @@ public class Vendor {
  */
   private int venId;
   private String venName;
-  private String venAddress;
   private double venPhno;
-  private String venEmail;
   private String ordStatus;
   private String delStatus;
   private float ordCost;
@@ -27,9 +25,7 @@ public class Vendor {
   /**
    * @param argVenId to initalize venId.
    * @param argVenName to initalize venName.
-   * @param argVenAddress to initalize venAddress.
-   * @param argVenPhno to initalize venPhno 
-   * @param argVenEmail to initalize venEmail.
+   * @param argVenPhno to initalize venPhno.
    * @param argOrdStatus to initalize ordStatus.
    * @param argDelStatus toinitalize delStatus.
    * @param argOrdCost to initalize ordCost.
@@ -38,14 +34,12 @@ public class Vendor {
    *                 details through constructor.
    */
 
-  public Vendor(final int argVenId, final String argVenName, final String argVenAddress, final double argVenPhno,
-      final String argVenEmail, final String argOrdStatus, final String argDelStatus, final float argOrdCost,
+  public Vendor(final int argVenId, final String argVenName, final double argVenPhno,
+       final String argOrdStatus, final String argDelStatus, final float argOrdCost,
       final int argOrdTokenNumber) {
     this.venId = argVenId;
     this.venName = argVenName;
-    this.venAddress = argVenAddress;
     this.venPhno = argVenPhno;
-    this.venEmail = argVenEmail;
     this.ordStatus = argOrdStatus;
     this.delStatus = argDelStatus;
     this.ordCost = argOrdCost;
@@ -54,55 +48,59 @@ public class Vendor {
 
   @Override
   public final boolean equals(final Object obj) {
-    if (this == obj)
-    return true;
-    if (obj == null)
-    return false;
-    if (getClass() != obj.getClass())
-    return false;
+    if (this == obj) {
+      return true;
+    }
+    if (obj == null) {
+      return false;
+    }
+    if (getClass() != obj.getClass()) {
+      return false;
+    }
     final Vendor other = (Vendor) obj;
     if (delStatus == null) {
-      if (other.delStatus != null)
-    return false;
-    } else if (!delStatus.equals(other.delStatus))
+      if (other.delStatus != null) {
+        return false;
+      }
+    } else if (!delStatus.equals(other.delStatus)) {
       return false;
-    if (Float.floatToIntBits(ordCost) != Float.floatToIntBits(other.ordCost))
-    return false;
+    }
+    if (Float.floatToIntBits(ordCost) != Float.floatToIntBits(other.ordCost)) {
+      return false;
+    }
     if (ordStatus == null) {
-      if (other.ordStatus != null)
-    return false;
-    } else if (!ordStatus.equals(other.ordStatus))
-    return false;
-    if (ordTokenNumber == 0) {
-      if (other.ordTokenNumber != 0)
-    return false;
-    } else if (ordTokenNumber==(other.ordTokenNumber))
-    return false;
-    if (venAddress == null) {
-      if (other.venAddress != null)
-    return false;
-    } else if (!venAddress.equals(other.venAddress))
-    return false;
-    if (venEmail == null) {
-      if (other.venEmail != null)
-    return false;
-    } else if (!venEmail.equals(other.venEmail))
-    return false;
-    if (venId != other.venId)
-    return false;
-    if (venName == null) {
-      if (other.venName != null)
-    return false;
-    } else if (!venName.equals(other.venName))
-    return false;
-    if (Double.doubleToLongBits(venPhno) != Double.doubleToLongBits(other.venPhno))
+      if (other.ordStatus != null) {
+        return false;
+      }
+    } else if (!ordStatus.equals(other.ordStatus)) {
       return false;
+    }
+    if (ordTokenNumber == 0) {
+      if (other.ordTokenNumber != 0) {
+        return false;
+      }
+    } else if (ordTokenNumber == (other.ordTokenNumber)) {
+      return false;
+    }
+    if (venId != other.venId) {
+      return false;
+    }
+    if (venName == null) {
+      if (other.venName != null) {
+        return false;
+      }
+    } else if (!venName.equals(other.venName)) {
+     return false;
+    }
+    if (Double.doubleToLongBits(venPhno) != Double.doubleToLongBits(other.venPhno)) {
+      return false;
+    }
     return true;
   }
 
   @Override
   public final int hashCode() {
-    return Objects.hash(venId, venName, venAddress, venPhno, venEmail, ordStatus, delStatus, ordCost, ordTokenNumber);
+    return Objects.hash(venId, venName, venPhno, ordStatus, delStatus, ordCost, ordTokenNumber);
   }
 
   /**
@@ -128,17 +126,6 @@ public class Vendor {
   }
 
   /**
-   * @return this vendor Address .
-   */
-  public String getVenAddress() {
-    return venAddress;
-  }
-
-  public void setVenAddress(final String venAddress) {
-    this.venAddress = venAddress;
-  }
-
-  /**
    * @return this vendor Phno .
    */
   public double getVenPhno() {
@@ -149,16 +136,6 @@ public class Vendor {
     this.venPhno = venPhno;
   }
 
-  /**
-   * @return this vendor Email .
-   */
-  public String getVenEmail() {
-    return venEmail;
-  }
-
-  public void setVenEmail(final String venEmail) {
-    this.venEmail = venEmail;
-  }
 
   /**
    * @return this ordStatus .
@@ -203,42 +180,24 @@ public class Vendor {
   public void setOrdTokenNumber(final int ordTokenNumber) {
     this.ordTokenNumber = ordTokenNumber;
   }
-
   /**
-   * @param argVenId
-   * @param argVenName
-   * @param argVenAddress
-   * @param argVenPhno
-   * @param argvenEmail
-   * @param argordStatus
-   * @param argdelStatus
-   * @param argordCost
-   * @param argordTokenNumber
-   */
-  /**
-   * @param argVenId          gets the food id.
-   * @param argVenName        gets the food Name.
-   * @param argVenAddress     gets the food Type
-   * @param argVenPhno        gets the vendor phone
-   * @param argVenEmail       gets the vendor email
-   * @param argOrdStatus      gets the order status
-   * @param argDelStatus      gets the delivery status
-   * @param argOrdCost        gets the order cost
+   * @param argVenId gets the vendor ID
+   * @param argVenName gets the vendor Name
+   * @param argVenPhno gets the vendor phone Number
+   * @param argOrdStatus gets the order of the status
+   * @param argDelStatus gets the delivery status
+   * @param argOrdCost gets the order cost
    * @param argOrdTokenNumber gets the token number
-   * 
    */
-  public final void setVendorId(final int argVenId, final String argVenName, final String argVenAddress,
-      final double argVenPhno, final String argVenEmail, final String argVenStatus, final String argOrdStatus,
+  public final void setVendorId(final int argVenId, final String argVenName,
+      final double argVenPhno, final String argVenStatus, final String argOrdStatus,
       final String argDelStatus, final float argOrdCost, final int argOrdTokenNumber) {
     this.venId = argVenId;
     this.venName = argVenName;
-    this.venAddress = argVenAddress;
     this.venPhno = argVenPhno;
-    this.venEmail = argVenEmail;
     this.ordStatus = argOrdStatus;
-      this.delStatus= argDelStatus;
-      this.ordCost= argOrdCost;   
-      this.ordTokenNumber= argOrdTokenNumber;
-  
-}
+    this.delStatus = argDelStatus;
+    this.ordCost = argOrdCost;
+    this.ordTokenNumber= argOrdTokenNumber;
+  }
 }
