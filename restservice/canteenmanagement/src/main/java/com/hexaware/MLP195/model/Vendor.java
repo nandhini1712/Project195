@@ -90,7 +90,7 @@ public class Vendor {
         return false;
       }
     } else if (!venName.equals(other.venName)) {
-     return false;
+      return false;
     }
     if (Double.doubleToLongBits(venPhno) != Double.doubleToLongBits(other.venPhno)) {
       return false;
@@ -106,10 +106,12 @@ public class Vendor {
   /**
    * @return this vendor Id.
    */
-  public int getVenId() {
+  public final int getVenId() {
     return venId;
   }
-
+/**
+ * @param venId
+ */
   public void setVenId(final int venId) {
     this.venId = venId;
   }
@@ -117,9 +119,12 @@ public class Vendor {
   /**
    * @return this vendor Name.
    */
-  public String getVenName() {
+  public final String getVenName() {
     return venName;
   }
+  /**
+   * @param venName
+   */
 
   public void setVenName(final String venName) {
     this.venName = venName;
@@ -128,9 +133,12 @@ public class Vendor {
   /**
    * @return this vendor Phno .
    */
-  public double getVenPhno() {
+  public final double getVenPhno() {
     return venPhno;
   }
+  /**
+   * @param venPhno
+   */
 
   public void setVenPhno(final double venPhno) {
     this.venPhno = venPhno;
@@ -140,9 +148,12 @@ public class Vendor {
   /**
    * @return this ordStatus .
    */
-  public String getOrdStatus() {
+  public final String getOrdStatus() {
     return ordStatus;
   }
+  /**
+   * @param ordStatus
+   */
 
   public void setOrdStatus(final String ordStatus) {
     this.ordStatus = ordStatus;
@@ -151,9 +162,12 @@ public class Vendor {
   /**
    * @return this delStatus .
    */
-  public String getDelStatus() {
+  public final String getDelStatus() {
     return delStatus;
   }
+  /**
+   * @param delStatus
+   */
 
   public void setDelStatus(final String delStatus) {
     this.delStatus = delStatus;
@@ -162,9 +176,12 @@ public class Vendor {
   /**
    * @return this ordCost .
    */
-  public float getOrdCost() {
+  public final float getOrdCost() {
     return ordCost;
   }
+  /**
+   * @param ordCost
+   */
 
   public void setOrdCost(final float ordCost) {
     this.ordCost = ordCost;
@@ -173,9 +190,12 @@ public class Vendor {
   /**
    * @return this ordTokenNumber.
    */
-  public int getOrdTokenNumber() {
+  public final int getOrdTokenNumber() {
     return ordTokenNumber;
   }
+  /**
+   * @param ordTokenNumber
+   */
 
   public void setOrdTokenNumber(final int ordTokenNumber) {
     this.ordTokenNumber = ordTokenNumber;
@@ -189,15 +209,14 @@ public class Vendor {
    * @param argOrdCost gets the order cost
    * @param argOrdTokenNumber gets the token number
    */
-  public final void setVendorId(final int argVenId, final String argVenName,
-      final double argVenPhno, final String argVenStatus, final String argOrdStatus,
-      final String argDelStatus, final float argOrdCost, final int argOrdTokenNumber) {
+  public final void setVendorId(final int argVenId, final String argVenName, final double argVenPhno, final String argVenStatus, final String argOrdStatus, final String argDelStatus, final float argOrdCost,
+      final int argOrdTokenNumber) {
     this.venId = argVenId;
     this.venName = argVenName;
     this.venPhno = argVenPhno;
     this.ordStatus = argOrdStatus;
     this.delStatus = argDelStatus;
     this.ordCost = argOrdCost;
-    this.ordTokenNumber= argOrdTokenNumber;
+    this.ordTokenNumber = argOrdTokenNumber;
   }
 }

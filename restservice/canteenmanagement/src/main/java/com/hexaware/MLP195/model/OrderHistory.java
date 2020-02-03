@@ -53,22 +53,22 @@ public class OrderHistory {
   }
 
   public String getOrdPayment() {
-        return ordPayment;
+    return ordPayment;
   }
 
   public void setOrdPayment(String ordPayment) {
-        this.ordPayment = ordPayment;
-    }
+    this.ordPayment = ordPayment;
+  }
 
   public String getOrdStatus() {
         return OrdStatus;
-    }
+  }
 
   public void setOrdStatus(String ordStatus) {
-        OrdStatus = ordStatus;
-    }
+    OrdStatus = ordStatus;
+  }
 
-    public float getTotCost() {
+  public float getTotCost() {
         return totCost;
     }
 
@@ -78,8 +78,8 @@ public class OrderHistory {
 
   @Override
   public int hashCode() {
-        final int prime = 31;
-        int result = 1;
+    final int prime = 31;
+    int result = 1;
     result = prime * result + ((OrdStatus == null) ? 0 : OrdStatus.hashCode());
     result = prime * result + ((ordDetails == null) ? 0 : ordDetails.hashCode());
     result = prime * result + ((ordPayment == null) ? 0 : ordPayment.hashCode());
@@ -91,34 +91,34 @@ public class OrderHistory {
 
   @Override
   public boolean equals(Object obj) {
-    if (this == obj){
+    if (this == obj) {
       return true;
     }
-    if (obj == null){
+    if (obj == null) {
       return false;
     }
-    if (getClass() != obj.getClass()){
+    if (getClass() != obj.getClass()) {
       return false;
     }
         OrderHistory other = (OrderHistory) obj;
     if (OrdStatus == null) {
-    if (other.OrdStatus != null){
-      return false;
+      if (other.OrdStatus != null) {
+        return false;
       }
      } else if (!OrdStatus.equals(other.OrdStatus)){
        return false;
      }
     if (ordDetails == null) {
     if (other.ordDetails != null){
-      return false;
-     }
-      } else if (!ordDetails.equals(other.ordDetails))
+        return false;
+      }
+    } else if (!ordDetails.equals(other.ordDetails))
             return false;
     if (ordPayment == null) {
-    if (other.ordPayment != null)
+      if (other.ordPayment != null)
                 return false;
       }
-        else if (!ordPayment.equals(other.ordPayment))
+    else if (!ordPayment.equals(other.ordPayment))
             return false;
     if (ordcusID != other.ordcusID)
             return false;
@@ -126,10 +126,10 @@ public class OrderHistory {
             return false;
     if (Float.floatToIntBits(totCost) != Float.floatToIntBits(other.totCost))
             return false;
-        return true;
-    }
+    return true;
+  }
 
-    @Override
+  @Override
     public String toString() {
     return "OrderHistory [OrdStatus=" + OrdStatus + ", ordDetails=" + ordDetails + ", ordPayment=" + ordPayment
                 + ", ordcusID=" + ordcusID + ", ordordID=" + ordordID + ", totCost=" + totCost + "]";
