@@ -3,15 +3,15 @@ package com.hexaware.MLP195.persistence;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-import com.hexaware.MLP195.model.Menu;
+import com.hexaware.MLP195.model.Wallet;
 
 import org.skife.jdbi.v2.tweak.ResultSetMapper;
 import org.skife.jdbi.v2.StatementContext;
 /**
- * MenuMapper class used to fetch menu data from database.
+ * WalletMapper class used to fetch menu data from database.
  * @author hexware
  */
-public class MenuMapper implements ResultSetMapper<Menu> {
+public class WalletMapper implements ResultSetMapper<Wallet> {
     /**
      * @param idx the index
      * @param rs the resultset
@@ -19,10 +19,10 @@ public class MenuMapper implements ResultSetMapper<Menu> {
      * @return the mapped customer object
      * @throws SQLException in case there is an error in fetching data from the resultset
      */
-  public final Menu map(final int idx, final ResultSet rs, final StatementContext ctx) throws SQLException {
+  public final Wallet map(final int idx, final ResultSet rs, final StatementContext ctx) throws SQLException {
       /**
-       * @return Menu
+       * @return Wallet
        */
-    return new Menu(rs.getInt("FOOD_ID"), rs.getString("FOOD_NAME"), rs.getString("FOOD_TYPE"), rs.getFloat("FOOD_PRICE"));
+    return new Wallet(rs.getInt("WalletCusId"), rs.getString("WalPaymentMode"), rs.getInt("WalBalance"));
   }
 }

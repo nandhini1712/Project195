@@ -16,13 +16,14 @@ VALUES
 
 
 -- inserting values into wallet
-insert into wallet (WAL_CUS_ID,WAL_PAYMENT_MODE)
+insert into wallet (WAL_CUS_ID,WAL_PAYMENT_MODE,WAL_BALANCE)
 values
-(1,'google pay'),
-(2,'debit card'),
-(3,'credit card'),
-(4,'cash on delivery'),
-(5,'paytm');
+(1,'google pay',52),
+(2,'debit card',20),
+(3,'credit card',69),
+(4,'cash on delivery',45),
+(5,'paytm',145);
+
 
 -- inserting values into menu 
 insert  into MENU VALUES 
