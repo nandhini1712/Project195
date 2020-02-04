@@ -17,37 +17,43 @@ class Main {
   private void mainMenu() {
     System.out.println("Canteen Management System");
     System.out.println("-----------------------");
-    System.out.println("1. Show Customer Details.");
-    System.out.println("2. Show Menu Details.");
-    System.out.println("3. Show Wallet Details.");
-    System.out.println("4. Show Vendor Details.");
-    System.out.println("5. Exit.");
+    //System.out.println("1. Customer");
+    System.out.println("2. Menu");
+    System.out.println("3. Wallet");
+    //System.out.println("4. Vendor");
+    System.out.println("5. Exit");
     System.out.println("Enter your choice");
-    int menuOption=option.nextInt();
-    switch(menuOption){
-        case 1:
-          //showFullCustomer();
-          mainMenu();
-          break;
-        case 2:
+    int menuOption = option.nextInt();
+    switch (menuOption) {
+      case 2:
+        System.out.println("CUSTOMER");
+        System.out.println("--------");
+        System.out.println("1. Display Customer Details");
+        System.out.println("2. Add Customer");
+        System.out.println("3. Update Customer");
+        int cusOption = option.nextInt();
+        switch (cusOption) {
+          case 1:
           showFullMenu();
-          mainMenu();
-          break;
-        case 3:
-          showFullWallet();
-          mainMenu();
-          break;
-        case 4:
+        }
+        
+        mainMenu();
+        break;
+      case 3:
+        showFullWallet();
+        mainMenu();
+        break;
+      case 4:
           //showFullVendor();
-          mainMenu();
-          break;
-        case 5:
-          Runtime.getRuntime().halt(0);
-          break;
-        default:
-            System.out.println(menuOption+" is not a valid choice");
-            option.nextLine();
-            mainMenu();
+        mainMenu();
+        break;
+      case 5:
+        Runtime.getRuntime().halt(0);
+        break;
+      default:
+        System.out.println(menuOption + " is not a valid choice");
+        option.nextLine();
+        mainMenu();
     }
   }
 

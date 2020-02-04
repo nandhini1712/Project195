@@ -57,11 +57,9 @@ public class Menu {
   public final int getFoodId() {
     return foodId;
   }
-
-  public void setFoodId(int foodId) {
-    this.foodId = foodId;
-  }
-
+    /**
+     * @return this food NAME.
+     */
   public String getFoodName() {
     return foodName;
   }

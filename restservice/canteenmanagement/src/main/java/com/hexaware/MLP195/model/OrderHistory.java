@@ -13,19 +13,21 @@ public class OrderHistory {
   private int ordordID;
   private String ordDetails;
   private String ordPayment;
-  private String OrdStatus;
+  private String ordStatus;
   private float totCost;
 
   public OrderHistory() {
   }
 
-  public OrderHistory(final int ordCusID, final int ordordID, final String ordDetails, final String ordPayment, final String ordStatus, float totCost) 
+  public OrderHistory(final int argordCusID, final int argordordID,
+      final String argordDetails, final String argordPayment,
+      final String argordStatus, float argtotCost) 
   {
     this.ordcusID = ordCusID;
     this.ordordID = ordordID;
     this.ordDetails = ordDetails;
     this.ordPayment = ordPayment;
-    this.OrdStatus = ordStatus;
+    this.ordStatus = ordStatus;
     this.totCost = totCost;
   }
 
@@ -53,22 +55,22 @@ public class OrderHistory {
   }
 
   public String getOrdPayment() {
-    return ordPayment;
+        return ordPayment;
   }
 
   public void setOrdPayment(String ordPayment) {
-    this.ordPayment = ordPayment;
-  }
+        this.ordPayment = ordPayment;
+    }
 
   public String getOrdStatus() {
         return OrdStatus;
-  }
+    }
 
   public void setOrdStatus(String ordStatus) {
-    OrdStatus = ordStatus;
-  }
+        OrdStatus = ordStatus;
+    }
 
-  public float getTotCost() {
+    public float getTotCost() {
         return totCost;
     }
 
@@ -80,14 +82,14 @@ public class OrderHistory {
   public int hashCode() {
     final int prime = 31;
     int result = 1;
-    result = prime * result + ((OrdStatus == null) ? 0 : OrdStatus.hashCode());
+    result = prime * result + ((ordStatus == null) ? 0 : OrdStatus.hashCode());
     result = prime * result + ((ordDetails == null) ? 0 : ordDetails.hashCode());
     result = prime * result + ((ordPayment == null) ? 0 : ordPayment.hashCode());
     result = prime * result + ordcusID;
     result = prime * result + ordordID;
     result = prime * result + Float.floatToIntBits(totCost);
-        return result;
-    }
+    return result;
+  }
 
   @Override
   public boolean equals(Object obj) {
@@ -102,23 +104,23 @@ public class OrderHistory {
     }
         OrderHistory other = (OrderHistory) obj;
     if (OrdStatus == null) {
-      if (other.OrdStatus != null) {
+      if (other.OrdStatus != null){
         return false;
       }
-     } else if (!OrdStatus.equals(other.OrdStatus)){
+     } else if (!OrdStatus.equals(other.OrdStatus)) {
        return false;
      }
     if (ordDetails == null) {
-    if (other.ordDetails != null){
+      if (other.ordDetails != null){
         return false;
-      }
-    } else if (!ordDetails.equals(other.ordDetails))
+    }
+      } else if (!ordDetails.equals(other.ordDetails))
             return false;
     if (ordPayment == null) {
-      if (other.ordPayment != null)
+    if (other.ordPayment != null)
                 return false;
-      }
-    else if (!ordPayment.equals(other.ordPayment))
+  }
+        else if (!ordPayment.equals(other.ordPayment))
             return false;
     if (ordcusID != other.ordcusID)
             return false;
@@ -131,7 +133,8 @@ public class OrderHistory {
 
   @Override
     public String toString() {
-    return "OrderHistory [OrdStatus=" + OrdStatus + ", ordDetails=" + ordDetails + ", ordPayment=" + ordPayment
+    return "OrderHistory [OrdStatus=" + ordStatus + ", ordDetails=" + ordDetails + ", ordPayment=" + ordPayment
                 + ", ordcusID=" + ordcusID + ", ordordID=" + ordordID + ", totCost=" + totCost + "]";
   }
 }
+
