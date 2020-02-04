@@ -1,9 +1,5 @@
 package com.hexaware.MLP195.model;
 import java.util.Objects;
-<<<<<<< HEAD
-=======
-
->>>>>>> 6658e22586ec10d8bbdf20b35aaf7b82b1ef8ccf
 /**
  * OrderHistory class used to display orderhistory information.
  * @author akash.hexware
@@ -18,7 +14,6 @@ public class OrderHistory {
   private String ordPayment;
   private String ordStatus;
   private float totCost;
-<<<<<<< HEAD
   /**
    * Default Constructor.
    */
@@ -114,129 +109,37 @@ public class OrderHistory {
     return ordStatus;
   }
     /**
-     * @param  argOrdStatus gets order status.
-     */
+    * @param  argOrdStatus gets order status.
+    */
   public void setOrdStatus(final String  argOrdStatus) {
     this.ordStatus = argOrdStatus;
-=======
-
-  public OrderHistory() {
   }
-
-  public OrderHistory(final int ordCusID, final int ordordID, final String ordDetails, final String ordPayment, final String ordStatus, float totCost) 
-  {
-    this.ordcusID = ordCusID;
-    this.ordordID = ordordID;
-    this.ordDetails = ordDetails;
-    this.ordPayment = ordPayment;
-    this.OrdStatus = ordStatus;
-    this.totCost = totCost;
+    /**
+     * @return this total cost.
+    */
+  public final float getTotCost() {
+    return totCost;
   }
-
-  public int getOrdcusID() {
-    return ordcusID;
+    /**
+    * @param  argTotCost gets order status.
+    */
+  public void setOrdStatus(final Float  argTotCost) {
+    this.totCost = argTotCost;
   }
-  public void setOrdcusID(int ordcusID) {
-    this.ordcusID = ordcusID;
-  }
-
-  public int getOrdordID() {
-    return ordordID;
-  }
-
-  public void setOrdordID(int ordordID) {
-    this.ordordID = ordordID;
-  }
-
-  public String getOrdDetails() {
-    return ordDetails;
-    }
-
-  public void setOrdDetails(String ordDetails) {
-    this.ordDetails = ordDetails;
-  }
-
-  public String getOrdPayment() {
-    return ordPayment;
-  }
-
-  public void setOrdPayment(String ordPayment) {
-    this.ordPayment = ordPayment;
-  }
-
-  public String getOrdStatus() {
-        return OrdStatus;
-  }
-
-  public void setOrdStatus(String ordStatus) {
-    OrdStatus = ordStatus;
-  }
-
-  public float getTotCost() {
-        return totCost;
-    }
-
-  public void setTotCost(float totCost) {
-        this.totCost = totCost;
-    }
-
-  @Override
-  public int hashCode() {
-    final int prime = 31;
-    int result = 1;
-    result = prime * result + ((OrdStatus == null) ? 0 : OrdStatus.hashCode());
-    result = prime * result + ((ordDetails == null) ? 0 : ordDetails.hashCode());
-    result = prime * result + ((ordPayment == null) ? 0 : ordPayment.hashCode());
-    result = prime * result + ordcusID;
-    result = prime * result + ordordID;
-    result = prime * result + Float.floatToIntBits(totCost);
-        return result;
-    }
-
-  @Override
-  public boolean equals(Object obj) {
-    if (this == obj) {
-      return true;
-    }
-    if (obj == null) {
-      return false;
-    }
-    if (getClass() != obj.getClass()) {
-      return false;
-    }
-        OrderHistory other = (OrderHistory) obj;
-    if (OrdStatus == null) {
-      if (other.OrdStatus != null) {
-        return false;
-      }
-     } else if (!OrdStatus.equals(other.OrdStatus)){
-       return false;
-     }
-    if (ordDetails == null) {
-    if (other.ordDetails != null){
-        return false;
-      }
-    } else if (!ordDetails.equals(other.ordDetails))
-            return false;
-    if (ordPayment == null) {
-      if (other.ordPayment != null)
-                return false;
-      }
-    else if (!ordPayment.equals(other.ordPayment))
-            return false;
-    if (ordcusID != other.ordcusID)
-            return false;
-    if (ordordID != other.ordordID)
-            return false;
-    if (Float.floatToIntBits(totCost) != Float.floatToIntBits(other.totCost))
-            return false;
-    return true;
-  }
-
-  @Override
-    public String toString() {
-    return "OrderHistory [OrdStatus=" + OrdStatus + ", ordDetails=" + ordDetails + ", ordPayment=" + ordPayment
-                + ", ordcusID=" + ordcusID + ", ordordID=" + ordordID + ", totCost=" + totCost + "]";
->>>>>>> 6658e22586ec10d8bbdf20b35aaf7b82b1ef8ccf
+    /**
+    * @param argOrdOrdId gets the customer id
+    * @param argOrdCusId gets the customer name
+    * @param argOrdDetails gets the customer address
+    * @param argOrdPayment gets the customer phno
+    * @param argOrdStatus gets the customer Email
+    * @param argTotCost gets the customer Date of birth
+    */
+  public final void setCustId(final int argOrdOrdId, final int argOrdCusId, final String argOrdDetails, final String argOrdPayment, final String argOrdStatus, final float argTotCost) {
+    this.ordcusId = argOrdCusId;
+    this.ordordId = argOrdOrdId;
+    this.ordDetails = argOrdDetails;
+    this.ordPayment = argOrdPayment;
+    this.ordStatus = argOrdStatus;
+    this.totCost = argTotCost;
   }
 }
