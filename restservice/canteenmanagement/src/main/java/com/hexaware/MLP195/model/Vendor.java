@@ -112,7 +112,7 @@ public class Vendor {
 /**
  * @param argvenId set venid
  */
-  public void setVenId(final int argvenId) {
+  public final void setVenId(final int argvenId) {
     this.venId = argvenId;
   }
 
@@ -129,7 +129,7 @@ public class Vendor {
 
 
 
-  public void setVenName(final String argvenName) {
+  public final void setVenName(final String argvenName) {
     this.venName = argvenName;
   }
 
@@ -143,7 +143,7 @@ public class Vendor {
    * @param argvenPhno set venphno
    */
 
-  public void setVenPhno(final double argvenPhno) {
+  public final void setVenPhno(final double argvenPhno) {
     this.venPhno = argvenPhno;
   }
 
@@ -158,7 +158,7 @@ public class Vendor {
    * @param argordStatus set orderstatus
    */
 
-  public void setOrdStatus(final String argordStatus) {
+  public final void setOrdStatus(final String argordStatus) {
     this.ordStatus = argordStatus;
   }
 
@@ -172,7 +172,7 @@ public class Vendor {
    * @param argdelStatus set delivery status
    */
 
-  public void setDelStatus(final String argdelStatus) {
+  public final void setDelStatus(final String argdelStatus) {
     this.delStatus = argdelStatus;
   }
 
@@ -186,7 +186,7 @@ public class Vendor {
    * @param argordCost set order cost
    */
 
-  public void setOrdCost(final float argordCost) {
+  public final void setOrdCost(final float argordCost) {
     this.ordCost = argordCost;
   }
 
@@ -200,7 +200,7 @@ public class Vendor {
    * @param argordTokenNumber set order token number
    */
 
-  public void setOrdTokenNumber(final int argordTokenNumber) {
+  public final void setOrdTokenNumber(final int argordTokenNumber) {
     this.ordTokenNumber = argordTokenNumber;
   }
   /**

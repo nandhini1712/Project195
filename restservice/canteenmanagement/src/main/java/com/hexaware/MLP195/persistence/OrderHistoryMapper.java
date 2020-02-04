@@ -23,6 +23,7 @@ public class OrderHistoryMapper implements ResultSetMapper<OrderHistory> {
       /**
        * @return OrderHistory
        */
-    return new OrderHistory(rs.getInt("ORD_CUS_ID"), rs.getInt("ORD_ORD_ID"), rs.getString("ORD_DETAILS"), rs.getString("ORD_STATMENTS"), rs.getString("ORD_STATUS"),rs.getFloat("ORD_TOT_COST"));
+    return new OrderHistory(rs.getInt("ORD_CUS_ID"), rs.getInt("ORD_ORD_ID"), rs.getString("ORD_DETAILS"),
+    rs.getString("ORD_STATMENTS"), rs.getString("ORD_STATUS"), rs.getFloat("ORD_TOT_COST"));
   }
 }

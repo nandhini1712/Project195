@@ -1,4 +1,6 @@
 package com.hexaware.MLP195.model;
+
+import java.sql.Date;
 import java.util.Objects;
 /**
  * Customer class used to display Customer information.
@@ -13,7 +15,7 @@ public class Customer {
   private String cusAddress;
   private int cusPhno;
   private String cusEmail;
-  private int cusDob;
+  private Date cusDob;
   /**
    * Default Constructor.
    */
@@ -30,7 +32,7 @@ public class Customer {
  */
   public Customer(final int argCusId, final String argCusName,
       final String argCusAddress, final int argCusPhno,
-      final String argCusmail, final int argCusDob) {
+      final String argCusmail, final Date argCusDob) {
     this.cusId = argCusId;
     this.cusName = argCusName;
     this.cusAddress = argCusAddress;
@@ -67,7 +69,7 @@ public class Customer {
     /**
      * @param  argCusId gets customer id.
      */
-  public void setCusId(final int  argCusId) {
+  public final void setCusId(final int argCusId) {
     this.cusId = argCusId;
   }
     /**
@@ -79,7 +81,7 @@ public class Customer {
     /**
      * @param  argCusName gets customer name.
      */
-  public void setCusName(final String  argCusName) {
+  public final void setCusName(final String argCusName) {
     this.cusName = argCusName;
   }
       /**
@@ -91,7 +93,7 @@ public class Customer {
     /**
      * @param  argCusAddress gets customer Address.
      */
-  public void setCusAddress(final String  argCusAddress) {
+  public final void setCusAddress(final String argCusAddress) {
     this.cusAddress = argCusAddress;
   }
     /**
@@ -101,9 +103,9 @@ public class Customer {
     return cusPhno;
   }
     /**
-    * @param  argCusPhno gets customer phonenumber.
+    * @param argCusPhno gets customer phonenumber
      */
-  public void setCusPhno(final int  argCusPhno) {
+  public final void setCusPhno(final int argCusPhno) {
     this.cusPhno = argCusPhno;
   }
     /**
@@ -115,19 +117,19 @@ public class Customer {
     /**
      * @param  argCusEmail gets customer Email.
      */
-  public void setCusEmail(final String  argCusEmail) {
+  public final void setCusEmail(final String argCusEmail) {
     this.cusEmail = argCusEmail;
   }
     /**
      * @return this customer Phonenumber.
     */
-  public final int getCusDob() {
+  public final Date getCusDob() {
     return cusDob;
   }
     /**
     * @param  argCusDob gets customer date of birth.
     */
-  public void setCusDob(final int  argCusDob) {
+  public final void setCusDob(final int argCusDob) {
     this.cusPhno = argCusDob;
   }
     /**
@@ -140,7 +142,7 @@ public class Customer {
      */
   public final void setCustId(final int argCusId, final String argCusName,
       final String argCusAddress, final int argCusPhno,
-      final String argCusEmail, final int argCusDob) {
+      final String argCusEmail, final Date argCusDob) {
     this.cusId = argCusId;
     this.cusName = argCusName;
     this.cusAddress = argCusAddress;

@@ -6,8 +6,7 @@ import java.sql.SQLException;
 import com.hexaware.MLP195.model.Customer;
 
 import org.skife.jdbi.v2.tweak.ResultSetMapper;
-import org.skife.jdbi.v2.ConcreteStatementContext;
-import java.sql.Date;
+import org.skife.jdbi.v2.StatementContext;
 /**
  * WalletMapper class used to fetch menu data from database.
  * @author hexware
@@ -22,11 +21,11 @@ public class CustomerMapper implements ResultSetMapper<Customer> {
      */
   public final Customer map(final int idx, final ResultSet rs, final StatementContext ctx) throws SQLException {
       /**
-       * @return Wallet
+       * @return customer
        */
     return new Customer(rs.getInt("CUS_ID"), rs.getString("CUS_NAME"),
-     rs.getString("CUS_ADDRESS"),rs.getInt("CUS_PHNO"),
-      rs.getString("CUS_EMAIL"), rs.getDate("CUS_DOB"));
+     rs.getString("CUS_ADDRESS"), rs.getInt("CUS_PHNO"),
+     rs.getString("CUS_EMAIL"), rs.getDate("CUS_DOB"));
   }
 }
 

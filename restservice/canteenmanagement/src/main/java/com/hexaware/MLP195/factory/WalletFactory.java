@@ -29,7 +29,8 @@ public class WalletFactory {
    * @return the array of menu object.
    */
   public static Wallet[] showWallet() {
-    List<Wallet> Wallet = dao().show();
-    return Wallet.toArray(new Wallet[Wallet.size()]);
+    List<Wallet> wallet = dao().show();
+    return wallet.toArray(new Wallet[wallet.size()]);
   }
 }
+

@@ -32,4 +32,35 @@ public class MenuFactory {
     List<Menu> menu = dao().show();
     return menu.toArray(new Menu[menu.size()]);
   }
+  /**
+   * @param foodId food id
+   * @param foodName foodName
+   * @param foodType foodType
+   * @param foodPrice foodPrice
+   * @return returs
+   */
+  public static int insertingMenu(final int foodId, final String foodName, final String foodType, final float foodPrice) {
+    int i = dao().insert(foodId, foodName, foodType, foodPrice);
+    return i;
+  }
+  /**
+   * @param foodPrice food price
+   * @param foodId food id
+   * @return returns
+   */
+  public static int editMenu(final float foodPrice, final int foodId) {
+    int check = dao().update(foodPrice, foodId);
+    return check;
+  }
+  /**
+   * @param foodId food id
+   * @return returns
+   */
+  public static int deleteMenu(final int foodId) {
+    int check = dao().deleteById(foodId);
+    return check;
+
+  }
 }
+
+

@@ -32,9 +32,7 @@ public class Menu {
     this.foodType = argFoodType;
     this.foodPrice = argFoodPrice;
   }
-  public Menu(int i) {
-}
-@Override
+  @Override
     public final boolean equals(final Object obj) {
     if (obj == null) {
       return false;
@@ -62,7 +60,7 @@ public class Menu {
     /**
      * @return this food NAME.
      */
-  public String getFoodName() {
+  public final String getFoodName() {
     return foodName;
   }
     /**

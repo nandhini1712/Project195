@@ -54,7 +54,7 @@ public class Wallet {
     /**
      * @return this customer ID.
      */
-  public int getwalCusId() {
+  public final int getwalCusId() {
     return walCusId;
   }
     /**
@@ -67,7 +67,7 @@ public class Wallet {
 /**
      * @return this WalPaymentMode.
      */
-  public int getwalBalance() {
+  public final int getwalBalance() {
     return walBalance;
   }
     /**
